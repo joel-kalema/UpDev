@@ -7,7 +7,6 @@ import Image from "next/image";
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -18,6 +17,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 
 import * as z from "zod"
+
 
 import { UserValidation } from "@/lib/validations/user";
 import { ChangeEvent } from "react";
@@ -39,10 +39,10 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
     const form = useForm({
         resolver: zodResolver(UserValidation),
         defaultValues: {
-            profile_photo: "",
-            name: "",
-            username: "",
-            bio: "",
+            profile_photo: user?.image || "",
+            name: user?.name || "",
+            username: user?.username || "",
+            bio: user?.bio || "",
         },
     });
 
@@ -108,7 +108,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                                 <FormLabel className='text-base-semibold text-light-2'>
                                     Name
                                 </FormLabel>
-                                <FormControl className='flex-1 text-base-semibold text-gray-200'>
+                                <FormControl>
                                     <Input
                                         type='text'
                                         className='account-form_input no-focus'
@@ -128,7 +128,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                                 <FormLabel className='text-base-semibold text-light-2'>
                                     UserName
                                 </FormLabel>
-                                <FormControl className='flex-1 text-base-semibold text-gray-200'>
+                                <FormControl>
                                     <Input
                                         type='text'
                                         className='account-form_input no-focus'
@@ -160,7 +160,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                         )}
                     />
 
-                    <Button type="submit">Submit</Button>
+                    <Button type='submit' className='bg-primary-500'>Submit</Button>
                 </form>
             </Form>
         </div>
