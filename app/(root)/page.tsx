@@ -25,7 +25,11 @@ async function Home({
 
   return (
     <>
-      <h1 className='head-text text-left'>Home</h1>
+
+      <div className="home-presentation">
+        <h1 className='head-text text-left mb-6'>Elevating the Developer Community</h1>
+        <p className="text-light-1 text-subtle-medium">UpDev is the ultimate social media platform for developers, fostering collaboration, innovation, and professional growth. Whether you're a seasoned coder or a budding developer, UpDev is your go-to destination. Connect, share, and learn within a vibrant community of like-minded individuals.</p>
+      </div>
 
       <section className='mt-9 flex flex-col gap-10'>
         {result.posts.length === 0 ? (

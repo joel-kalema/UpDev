@@ -2,10 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* .back { */
+
 @layer components {
+
+  .home-presentation {
+    padding: 3rem;
+    background-image: url("/home.jpg");
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+  }
+
   /* main */
   .main-container {
     @apply flex min-h-screen flex-1 flex-col items-center bg-dark-1 px-6 pb-10 pt-28 max-md:pb-32 sm:px-10;
+    background: rgb(4,4,18);
+background: linear-gradient(144deg, rgba(4,4,18,1) 0%, rgba(5,30,41,1) 45%, rgba(11,22,26,1) 58%, rgba(5,34,41,1) 100%);
+    background-attachment: fixed;
   }
 
   /* Head Text */
@@ -76,6 +91,9 @@
 
   .leftsidebar {
     @apply sticky left-0 top-0 z-20 flex h-screen w-fit flex-col justify-between overflow-auto border-r border-r-dark-4 bg-dark-2 pb-5 pt-28 max-md:hidden;
+    border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+    animation: borderRotate var(--d) linear infinite forwards;
+    font-size: .8rem;
   }
 
   .leftsidebar_link {
@@ -121,9 +139,7 @@
   @apply max-sm:hidden;
 }
 
-.cl-organizationSwitcherTrigger
-  .cl-organizationPreview
-  .cl-organizationPreviewTextContainer {
+.cl-organizationSwitcherTrigger .cl-organizationPreview .cl-organizationPreviewTextContainer {
   @apply max-sm:hidden;
 }
 
@@ -158,4 +174,38 @@
 
 .comment-form_btn {
   @apply rounded-3xl bg-primary-500 px-8 py-2 !text-small-regular text-light-1 max-xs:w-full !important;
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+
+
+:root {
+  --d: 2500ms;
+  --angle: 90deg;
+  --gradX: 100%;
+  --gradY: 50%;
+  --c1: #c0c4d0;
+  --c2: rgba(168, 239, 255, 0.1);
+}
+
+@keyframes borderRotate {
+  100% {
+    --angle: 420deg;
+  }
 }

@@ -10,7 +10,12 @@ import Bottombar from "@/components/shared/Bottombar";
 import RightSidebar from "@/components/shared/RightSidebar";
 import Topbar from "@/components/shared/Topbar";
 
-const inter = Inter({ subsets: ["latin"] });
+import { Questrial } from 'next/font/google';
+
+const inter = Questrial({
+  subsets: ['latin'],
+  weight: '400'
+})
 
 export const metadata: Metadata = {
   title: "UpDev",
@@ -34,7 +39,7 @@ export default function RootLayout({
 
           <main className='flex flex-row'>
             <LeftSidebar />
-            <section className='main-container'>
+            <section className='main-container  back'>
               <div className='w-full max-w-4xl'>{children}</div>
             </section>
             {/* @ts-ignore */}
