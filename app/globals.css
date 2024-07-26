@@ -18,8 +18,8 @@
   /* main */
   .main-container {
     @apply flex min-h-screen flex-1 flex-col items-center bg-dark-1 px-6 pb-10 pt-28 max-md:pb-32 sm:px-10;
-    background: rgb(4,4,18);
-background: linear-gradient(144deg, rgba(4,4,18,1) 0%, rgba(5,30,41,1) 45%, rgba(11,22,26,1) 58%, rgba(5,34,41,1) 100%);
+    background: rgb(4, 4, 18);
+    background: linear-gradient(144deg, rgba(4, 4, 18, 1) 0%, rgba(5, 30, 41, 1) 45%, rgba(11, 22, 26, 1) 58%, rgba(5, 34, 41, 1) 100%);
     background-attachment: fixed;
   }
 
@@ -44,7 +44,8 @@ background: linear-gradient(144deg, rgba(4,4,18,1) 0%, rgba(5,30,41,1) 45%, rgba
   }
 
   .community-card_btn {
-    @apply rounded-lg bg-primary-500 px-5 py-1.5 text-small-regular !text-light-1 !important;
+    @apply rounded-lg px-5 py-1.5 text-small-regular !text-light-1 !important;
+    background-color: #427d37 !important;
   }
 
   /* thread card  */
@@ -62,7 +63,8 @@ background: linear-gradient(144deg, rgba(4,4,18,1) 0%, rgba(5,30,41,1) 45%, rgba
   }
 
   .user-card_btn {
-    @apply h-auto min-w-[74px] rounded-lg bg-primary-500 text-[12px] text-light-1 !important;
+    @apply h-auto min-w-[74px] rounded-lg text-[12px] text-light-1 !important;
+    background-color: #427d37 !important;
   }
 
   .searchbar {
@@ -173,7 +175,8 @@ background: linear-gradient(144deg, rgba(4,4,18,1) 0%, rgba(5,30,41,1) 45%, rgba
 }
 
 .comment-form_btn {
-  @apply rounded-3xl bg-primary-500 px-8 py-2 !text-small-regular text-light-1 max-xs:w-full !important;
+  @apply rounded-3xl px-8 py-2 !text-small-regular text-light-1 max-xs:w-full !important;
+  background-color: #427d37 !important;
 }
 
 @property --angle {
