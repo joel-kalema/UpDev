@@ -41,9 +41,8 @@ function ThreadCard({
 }: Props) {
   return (
     <article
-      className={`flex w-full flex-col rounded-xl ${
-        isComment ? "px-0 xs:px-7" : "bg-dark-2 p-7"
-      }`}
+      className={`flex w-full flex-col rounded-xl ${isComment ? "px-0 xs:px-7" : "bg-dark-2 p-7"
+        }`}
     >
       <div className='flex items-start justify-between'>
         <div className='flex w-full flex-1 flex-row gap-4'>
@@ -57,7 +56,14 @@ function ThreadCard({
               />
             </Link>
 
-            <div className='thread-card_bar' />
+            <div className="flex flex-col justify-center items-center h-[60%]">
+              <div className='thread-card_bar mb-2' />
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ffffff96] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-[#ffffff96]"></span>
+              </span>
+            </div>
+
           </div>
 
           <div className='flex w-full flex-col'>
