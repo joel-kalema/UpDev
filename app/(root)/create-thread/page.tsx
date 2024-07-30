@@ -1,6 +1,8 @@
 import { currentUser } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
+import { OrganizationSwitcher, SignedIn, SignOutButton } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
 import PostThread from "@/components/forms/PostThread";
 import { fetchUser } from "@/lib/actions/user.actions";
 
@@ -14,7 +16,17 @@ async function Page() {
 
   return (
     <>
-      <h1 className='head-text'>Create Thread</h1>
+      <div className="flex justify-between items-center">
+        <h1 className='head-text'>Create Post</h1>
+        <OrganizationSwitcher
+          appearance={{
+            baseTheme: dark,
+            elements: {
+              organizationSwitcherTrigger: "py-2 px-4",
+            },
+          }}
+        />
+      </div>
 
       <PostThread userId={userInfo._id} />
     </>
