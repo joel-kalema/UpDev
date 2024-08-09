@@ -183,6 +183,38 @@ html {
   background-color: #427d37 !important;
 }
 
+/* Detect headers */
+.important-h1 {
+  margin-bottom: 2rem !important;
+  color: #ffffff !important;
+  font-size: 2rem !important;
+  font-weight: 800 !important; /* Extra bold */
+}
+
+.important-h2 {
+  margin-bottom: 1.5rem !important;
+  color: #ffffff !important;
+  font-size: 1.75rem !important;
+  font-weight: 800 !important; /* Extra bold */
+}
+
+.important-h3 {
+  margin-bottom: 1.25rem !important;
+  color: #ffffff !important;
+  font-size: 1.5rem !important;
+  font-weight: 800 !important; /* Extra bold */
+}
+
+.important-h4 {
+  margin-bottom: 1rem !important;
+  color: #ffffff !important;
+  font-size: 1.25rem !important;
+  font-weight: 800 !important; /* Extra bold */
+}
+
+
+/* animation */
+
 @property --angle {
   syntax: '<angle>';
   initial-value: 90deg;

@@ -35,22 +35,32 @@ export const parseContent = (content: string): React.ReactNode[] => {
         // Detect headers
         if (line.startsWith('#### ')) {
             parsedContent.push(
-                <h4 key={i} style={{ marginBottom: '1rem', color: '#ffffff' }}>{line.slice(5)}</h4>
+                <h4 key={i} className="important-h4">
+                    {line.slice(5)}
+                </h4>
             );
         } else if (line.startsWith('### ')) {
             parsedContent.push(
-                <h3 key={i} style={{ marginBottom: '1.25rem', color: '#ffffff' }}>{line.slice(4)}</h3>
+                <h3 key={i} className="important-h3">
+                    {line.slice(4)}
+                </h3>
             );
         } else if (line.startsWith('## ')) {
             parsedContent.push(
-                <h2 key={i} style={{ marginBottom: '1.5rem', color: '#ffffff' }}>{line.slice(3)}</h2>
+                <h2 key={i} className="important-h2">
+                    {line.slice(3)}
+                </h2>
             );
         } else if (line.startsWith('# ')) {
             parsedContent.push(
-                <h1 key={i} style={{ marginBottom: '2rem', color: '#ffffff' }}>{line.slice(2)}</h1>
+                <h1 key={i} className="important-h1">
+                    {line.slice(2)}
+                </h1>
             );
         }
+
         // Detect code blocks starting with ```
+        
         else if (line.startsWith('```')) {
             // Gather code block content
             const language = line.slice(3).trim() || "javascript"; // Get the language, default to "javascript"
