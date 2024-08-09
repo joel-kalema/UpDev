@@ -62,5 +62,15 @@ export const content = [
     `
     \`\`\`kotlin
     `,
-  ];
-  
+];
+
+
+export const linkExample = [
+    "[link text](http://example.com)",
+    "[link text](http://example.com)"
+];
+
+
+export const headers = [
+    "# h1","## h2","### h3","#### h4"
+]

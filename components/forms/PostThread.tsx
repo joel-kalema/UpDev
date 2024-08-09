@@ -19,7 +19,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { createThread } from "@/lib/actions/thread.actions";
 import { ThreadValidation } from "@/lib/validations/thread";
 import { parseContent } from "@/utils/parseContent";
-import { content } from "@/utils/langages";
+import { content, linkExample, headers } from "@/utils/langages";
 import { Typewriter } from "react-simple-typewriter";
 
 interface Props {
@@ -55,6 +55,11 @@ function PostThread({ userId }: { userId: string }) {
         .map(line => line.trim())
         .filter(line => line.length > 0);
 
+    const aniamtiolinkExample = linkExample.join('\n')
+        .split('\n')
+        .map(line => line.trim())
+        .filter(line => line.length > 0);
+
     const handleContentChange = (value: string) => {
         form.setValue("thread", value); // Update form state
         setParsedContent(parseContent(value)); // Pass textContent to parseContent
@@ -80,19 +85,49 @@ function PostThread({ userId }: { userId: string }) {
 
 
                 {/* Example Typewriter usage for some static content */}
-                <div className="flex text-light-2 text-[13px]">
-                    <p className="mr-2">to add code:</p>
-                    <div className='bg-[#ffffff1b] p-1'>
-                        <Typewriter
-                            words={animation}
-                            loop={5}
-                            cursor
-                            cursorStyle='_'
-                            typeSpeed={90}
-                            deleteSpeed={50}
-                            delaySpeed={1000}
-                        />
-                        <p className="ml-2">code_</p>
+                <div className="flex">
+                    <div className="flex text-light-2 items-center text-[13px] w-1/6">
+                        <p className="mr-2 bg-[#ffffff1b] rounded-lg p-1">{"</>"}</p>
+                        <div className=''>
+                            <Typewriter
+                                words={animation}
+                                loop={Infinity} 
+                                cursor
+                                cursorStyle='_'
+                                typeSpeed={90}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+                            />
+                        </div>
+                    </div>
+                    <div className="flex items-center text-light-2 text-[13px] w-1/6">
+                        <p className="mr-2 bg-[#ffffff1b] rounded-lg p-1">Link</p>
+                        <div className=''>
+                            <Typewriter
+                                words={headers}
+                                loop={Infinity} 
+                                cursor
+                                cursorStyle='_'
+                                typeSpeed={90}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+                            />
+                        </div>
+                    </div>
+
+                    <div className="flex items-center text-light-2 text-[13px] w-2/6">
+                        <p className="mr-2 bg-[#ffffff1b] rounded-lg p-1">Link</p>
+                        <div className=''>
+                            <Typewriter
+                                words={aniamtiolinkExample}
+                                loop={Infinity} 
+                                cursor
+                                cursorStyle='_'
+                                typeSpeed={90}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+                            />
+                        </div>
                     </div>
                 </div>
 
@@ -100,13 +135,13 @@ function PostThread({ userId }: { userId: string }) {
                     control={form.control}
                     name='thread'
                     render={({ field }) => (
-                        <FormItem className='flex w-full flex-col gap-3'>
+                        <FormItem className='flex w-full flex-col gap-2'>
                             <FormLabel className='text-base-semibold text-light-2'>
                                 Content
                             </FormLabel>
                             <FormControl className='no-focus border border-dark-4 bg-[#262626a5] text-light-1'>
                                 <Textarea
-                                    rows={15}
+                                    rows={10}
                                     {...field}
                                     onChange={(e) => handleContentChange(e.target.value)}
                                 />
