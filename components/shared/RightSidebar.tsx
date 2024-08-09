@@ -17,7 +17,7 @@ async function RightSidebar() {
   const suggestedCOmmunities = await fetchCommunities({ pageSize: 4 });
 
   return (
-    <section className='custom-scrollbar rightsidebar'>
+    <section className='custom-scrollbar rightsidebar border-r border-[#ffffff23]'>
       <div className='flex w-[320px] flex-1 flex-col justify-start bg-[#ffffff0f] p-6 rounded-lg border border-[#ffffff23]'>
         <h3 className='text-heading4-medium text-light-1'>
           Suggested Communities

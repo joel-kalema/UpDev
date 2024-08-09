@@ -31,7 +31,7 @@ async function Home({
         <p className="text-light-1 text-subtle-medium">UpDev is the ultimate social media platform for developers, fostering collaboration, innovation, and professional growth. Whether you're a seasoned coder or a budding developer, UpDev is your go-to destination. Connect, share, and learn within a vibrant community of like-minded individuals.</p>
       </div>
 
-      <section className='mt-9 flex flex-col gap-10'>
+      <section className='mt-9 flex flex-col'>
         {result.posts.length === 0 ? (
           <p className='no-result'>No threads found</p>
         ) : (

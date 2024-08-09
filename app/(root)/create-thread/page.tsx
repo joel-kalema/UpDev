@@ -15,9 +15,9 @@ async function Page() {
   if (!userInfo?.onboarded) redirect("/onboarding");
 
   return (
-    <>
+    <div className="px-6">
       <div className="flex justify-between items-center">
-        <h1 className='head-text'>Create Post</h1>
+        <h1 className='head-text text-sm'>+ Post</h1>
         <OrganizationSwitcher
           appearance={{
             baseTheme: dark,
@@ -29,7 +29,7 @@ async function Page() {
       </div>
 
       <PostThread userId={userInfo._id} />
-    </>
+    </div>
   );
 }
 
