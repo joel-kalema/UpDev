@@ -26,7 +26,7 @@ async function Page({
   });
 
   return (
-    <>
+    <div className="px-6">
       <h1 className='head-text'>Communities</h1>
 
       <div className='mt-5'>
@@ -58,7 +58,7 @@ async function Page({
         pageNumber={searchParams?.page ? +searchParams.page : 1}
         isNext={result.isNext}
       />
-    </>
+    </div>
   );
 }
 
