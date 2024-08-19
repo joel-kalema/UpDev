@@ -56,7 +56,8 @@ function ThreadCard({
                                 className='cursor-pointer rounded-full'
                             />
                         </Link>
-                        <div className="flex flex-col justify-center items-center h-[60%]">
+                        <div className='thread-card_bar mb-2' />
+                        <div className="flex flex-col justify-center items-center h-[]">
                             <div className='thread-card_bar mb-2' />
                             <span className="relative flex h-3 w-3">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ffffff96] opacity-75"></span>
@@ -71,10 +72,9 @@ function ThreadCard({
                             </h4>
                         </Link>
                         <div className='mt-2 text-small-regular text-light-2'>
-                            {/* Syntax highlighting for the content */}
-                            <div>{parseContent(content)}</div>
+                            <div className="w-full">{parseContent(content)}</div>
                         </div>
-                        <div className={`${isComment ? "mb-10" : ""} mt-5 flex flex-col gap-3`}>
+                        <div className={`${isComment && "mb-10"} mt-5 flex flex-col gap-3`}>
                             <div className='flex gap-3.5'>
                                 <Image
                                     src='/assets/heart-gray.svg'
