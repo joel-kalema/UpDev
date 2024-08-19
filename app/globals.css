@@ -9,7 +9,7 @@ html {
 }
 
 @layer components {
-
+  
   .home-presentation {
     padding: 3rem;
     width: 100%;
