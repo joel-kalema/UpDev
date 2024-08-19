@@ -7,6 +7,8 @@ import { SignOutButton, SignedIn, useAuth } from "@clerk/nextjs";
 
 import { sidebarLinks } from "@/constants";
 
+import { FaPlus, FaHistory } from "react-icons/fa";
+
 const LeftSidebar = () => {
   const router = useRouter();
   const pathname = usePathname();
@@ -27,7 +29,7 @@ const LeftSidebar = () => {
             <Link
               href={link.route}
               key={link.label}
-              className={`leftsidebar_link hover:bg-[#417d3752] ${isActive && "bg-[#427d37] "}`}
+              className={`leftsidebar_link hover:bg-[#417d3752] ${isActive && "bg-[#427d37]"}`}
             >
               <Image
                 src={link.imgURL}
