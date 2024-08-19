@@ -9,7 +9,7 @@ html {
 }
 
 @layer components {
-  
+
   .home-presentation {
     padding: 3rem;
     width: 100%;
@@ -264,4 +264,18 @@ html {
   border-radius: 8px;
   background-clip: content-box;
   background-color: #707070;
+}
+
+
+/* HTML: <div class="loader"></div> */
+/* link to the web site: https://css-loaders.com/dots/ */
+.loader {
+  height: 6px;
+  aspect-ratio: 5;
+  -webkit-mask: linear-gradient(90deg,#0000 ,#ffffff 20% 80%,#0000);
+  background: radial-gradient(closest-side at 37.5% 50%,#ffffff20 94%,#0000) 0/calc(80%/3) 100%;
+  animation: l48 .75s infinite linear;
+}
+@keyframes l48 {
+  100% {background-position: 36.36%}
 }

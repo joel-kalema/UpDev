@@ -23,7 +23,8 @@ async function Page() {
           <>
             {activity.map((activity) => (
               <Link key={activity._id} href={`/thread/${activity.parentId}`}>
-                <article className='activity-card'>
+                <article className='activity-card justify-between bg-[#ffffff0f] p-2 rounded-lg border border-[#ffffff23] hover:bg-[#ffffff16]'>
+                  <div className="flex items-center gap-2">
                   <Image
                     src={activity.author.image}
                     alt='user_logo'
@@ -37,6 +38,8 @@ async function Page() {
                     </span>{" "}
                     replied to your thread
                   </p>
+                  </div>
+                  <div className="loader"></div>
                 </article>
               </Link>
             ))}

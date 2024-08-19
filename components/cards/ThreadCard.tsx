@@ -75,14 +75,7 @@ function ThreadCard({
                         </div>
                         <div className={`${isComment && "mb-10"} mt-5 flex flex-col gap-3`}>
                             <div className='flex gap-3.5'>
-                                <Image
-                                    src='/assets/heart-gray.svg'
-                                    alt='heart'
-                                    width={24}
-                                    height={24}
-                                    className='cursor-pointer object-contain'
-                                />
-                                <Link href={`/thread/${id}`}>
+                                <Link href={`/thread/${id}`} className="flex items-center gap-1 text-light-2 border border-[#ffffff23] py-1 px-2 hover:bg-[#ffffff0f] mr-4">
                                     <Image
                                         src='/assets/reply.svg'
                                         alt='heart'
@@ -90,7 +83,15 @@ function ThreadCard({
                                         height={24}
                                         className='cursor-pointer object-contain'
                                     />
+                                    <p className="text-[.7rem]">Reply</p>
                                 </Link>
+                                <Image
+                                    src='/assets/heart-gray.svg'
+                                    alt='heart'
+                                    width={24}
+                                    height={24}
+                                    className='cursor-pointer object-contain'
+                                />
                                 <Image
                                     src='/assets/repost.svg'
                                     alt='heart'

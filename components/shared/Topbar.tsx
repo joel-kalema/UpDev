@@ -14,12 +14,12 @@ function Topbar() {
             </Link>
 
             <div className="flex gap-3 text-[.8rem]">
-                <Link href="/activity" className="flex text-light-1 items-center gap-1 border border-[#ffffff23] py-1 px-2">
+                <Link href="/activity" className="flex text-light-1 items-center gap-1 border border-[#ffffff23] py-1 px-2 hover:bg-[#ffffff0f]">
                 <FaHistory />
                     <p>Activity</p>
                 </Link>
 
-                <Link href="/create-post" className="flex text-light-1 items-center gap-1 border border-[#ffffff23] py-1 px-2">
+                <Link href="/create-post" className="flex text-light-1 items-center gap-1 border border-[#ffffff23] py-1 px-2 hover:bg-[#ffffff0f]">
                     <FaPlus />
                     <p>Create</p>
                 </Link>
