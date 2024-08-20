@@ -22,6 +22,8 @@ import { parseContent } from "@/utils/parseContent";
 import { content, linkExample, headers } from "@/utils/langages";
 import { Typewriter } from "react-simple-typewriter";
 
+import { IoAddCircle } from "react-icons/io5";
+
 interface Props {
     userId: string;
 }
@@ -29,7 +31,7 @@ interface Props {
 function PostThread({ userId }: Props) {
     const router = useRouter();
     const pathname = usePathname();
-  
+
     const { organization } = useOrganization();
 
     const [parsedContent, setParsedContent] = useState<React.ReactNode[]>([]);
@@ -84,7 +86,7 @@ function PostThread({ userId }: Props) {
                         <div className=''>
                             <Typewriter
                                 words={animation}
-                                loop={Infinity} 
+                                loop={Infinity}
                                 cursor
                                 cursorStyle='_'
                                 typeSpeed={90}
@@ -98,7 +100,7 @@ function PostThread({ userId }: Props) {
                         <div className=''>
                             <Typewriter
                                 words={headers}
-                                loop={Infinity} 
+                                loop={Infinity}
                                 cursor
                                 cursorStyle='_'
                                 typeSpeed={90}
@@ -113,7 +115,7 @@ function PostThread({ userId }: Props) {
                         <div className=''>
                             <Typewriter
                                 words={aniamtiolinkExample}
-                                loop={Infinity} 
+                                loop={Infinity}
                                 cursor
                                 cursorStyle='_'
                                 typeSpeed={90}
@@ -148,14 +150,14 @@ function PostThread({ userId }: Props) {
                     <h1 className='text-base-semibold text-light-2'>Preview</h1>
                     <div className="preview-area p-3 bg-[#ffffff11]">
                         {parsedContent}
+                        <Button type='submit' className='bg-[#fff2] flex gap-2 items-center mt-4 border-[#ffffff23] hover:bg-[#ffffff2c]'>
+                            <p>Post</p>
+                            <IoAddCircle />
+                        </Button>
                     </div>
+
                 </div>
 
-
-
-                <Button type='submit' className='bg-[#fff2] border-[#ffffff23] hover:bg-[#ffffff2c]'>
-                    Post
-                </Button>
             </form>
         </Form>
     );
