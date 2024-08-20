@@ -28,7 +28,7 @@ async function Page({ params }: { params: { id: string } }) {
         type='Community'
       />
 
-      <div className='mt-9'>
+      <div className='mt-9 px-6'>
         <Tabs defaultValue='threads' className='w-full'>
           <TabsList className='tab'>
             {communityTabs.map((tab) => (
