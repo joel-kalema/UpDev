@@ -20,6 +20,8 @@ import { Button } from "../ui/button";
 import { CommentValidation } from "@/lib/validations/thread";
 import { addCommentToThread } from "@/lib/actions/thread.actions";
 
+import { GoReply } from "react-icons/go";
+
 interface Props {
   threadId: string;
   currentUserImg: string;
@@ -49,7 +51,7 @@ function Comment({ threadId, currentUserImg, currentUserId }: Props) {
 
   return (
     <Form {...form}>
-      <form className='comment-form' onSubmit={form.handleSubmit(onSubmit)}>
+      <form className='comment-form px-6' onSubmit={form.handleSubmit(onSubmit)}>
         <FormField
           control={form.control}
           name='thread'
@@ -76,8 +78,9 @@ function Comment({ threadId, currentUserImg, currentUserId }: Props) {
           )}
         />
 
-        <Button type='submit' className='comment-form_btn'>
-          Reply
+        <Button type='submit' className='bg-[#fff2] flex gap-2 items-center mt-4 border-[#ffffff23] hover:bg-[#ffffff2c]'>
+          <p>Reply</p>
+          <GoReply />
         </Button>
       </form>
     </Form>

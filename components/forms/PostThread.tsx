@@ -82,7 +82,7 @@ function PostThread({ userId }: Props) {
                 {/* Example Typewriter usage for some static content */}
                 <div className="flex">
                     <div className="flex text-light-2 items-center text-[13px] w-1/6">
-                        <p className="mr-2 bg-[#ffffff1b] rounded-lg p-1">{"</>"}</p>
+                        <p className="mr-2 bg-[#ffffff1b] rounded-lg py-1 px-2">{"</>"}</p>
                         <div className=''>
                             <Typewriter
                                 words={animation}
@@ -96,7 +96,7 @@ function PostThread({ userId }: Props) {
                         </div>
                     </div>
                     <div className="flex items-center text-light-2 text-[13px] w-1/6">
-                        <p className="mr-2 bg-[#ffffff1b] rounded-lg p-1">Link</p>
+                        <p className="mr-2 bg-[#ffffff1b] rounded-lg py-1 px-2">Link</p>
                         <div className=''>
                             <Typewriter
                                 words={headers}
@@ -111,7 +111,7 @@ function PostThread({ userId }: Props) {
                     </div>
 
                     <div className="flex items-center text-light-2 text-[13px] w-2/6">
-                        <p className="mr-2 bg-[#ffffff1b] rounded-lg p-1">Link</p>
+                        <p className="mr-2 bg-[#ffffff1b] rounded-lg py-1 px-2">Link</p>
                         <div className=''>
                             <Typewriter
                                 words={aniamtiolinkExample}
